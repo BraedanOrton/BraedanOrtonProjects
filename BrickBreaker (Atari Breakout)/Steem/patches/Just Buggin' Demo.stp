@@ -1,0 +1,10 @@
+[Text]
+Description=This demo used to work but we improved emulation and now it doesn't, it will work in v2.5 but until that is released here is a patch so you can run it anyway. Unfortunately, there are 2 screens that quit instantly, these will be fixed in the next version of Steem.
+ApplyWhen=It says "press space" and when you do nothing happens.
+Version=Works on Steem v2.4
+PatchAuthor=Russell Hayward
+Obsolete=2.5
+
+[Patch]
+1B3a=$0000
+fffc02=$11

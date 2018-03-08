@@ -1,0 +1,10 @@
+[Text]
+Description=When the Steem resets it doesn't update the parallel port as it should, here's a patch to fix it.
+ApplyWhen=You have reset or have loaded a snapshot
+Version=Works on Steem v2.4
+PatchAuthor=Russell Hayward
+Obsolete=2.5
+
+[Patch]
+ff8800=15
+ff8802=$0

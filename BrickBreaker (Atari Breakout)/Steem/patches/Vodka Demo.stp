@@ -1,0 +1,14 @@
+[Text]
+Description=This demo has a very strange protection routine, until we figure it out you'll have to use this patch. Try to find the one disk version of the demo, that is the only one that has been tested. Sometimes after applying the patch the intro won't respond to keys, if that happens reset and try again, it will work eventually!
+ApplyWhen=The screen goes black.
+Version=Works on Steem v2.3
+PatchAuthor=Russell Hayward
+Obsolete=2.4
+
+[Patch]
+3070=$4e71
+ff8200=$FF07
+ff8202=$FF80
+ff820a=$02FF
+ff820c=$FF00
+ff820e=$FF00

@@ -1,0 +1,9 @@
+[Text]
+Description=This game does some crazy stuff with DMA sound, it doesn't work on Steem but you can skip it with this patch and play the game in silence.
+ApplyWhen=It says to press space.
+Version=Works on Steem v2.3
+PatchAuthor=Russell Hayward
+Obsolete=2.4
+
+[Patch]
+00E558=$4E75

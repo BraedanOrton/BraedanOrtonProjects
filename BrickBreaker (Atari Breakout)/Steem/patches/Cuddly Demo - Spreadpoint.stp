@@ -1,0 +1,8 @@
+[Text]
+Description=This screen freezes up when loading. All the other screens in the demo now work, so this patch makes it complete.
+ApplyWhen="Blipps to go" gets to 0.
+Version=Works on Steem v2.4
+PatchAuthor=Russell Hayward
+
+[Patch]
+000E20=$4e71 $4e71

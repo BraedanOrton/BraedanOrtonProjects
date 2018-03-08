@@ -1,0 +1,324 @@
+[SCROLLERS]
+§v, built §b
+running §d
+Press the pause/break key to release the mouse, shift-pause/break to stop emulation
+visit the steem website for all the latest news & updates: http://steem.atari.org
+Comments or queries?  Email steem@gmx.net
+Steem, the STE emulating engine, written by Anthony and Russell Hayward
+found a bug or a game that won't run?  Send us a bug report (see readme for details)
+Right-click on the fast forward button to use the flashlight - see if there is really something there on a black screen
+Having problems? Read the FAQ first, if that doesn't help then email us (steem@gmx.net)
+steem was created using Borland's Free C++ compiler
+Thanks to: Xavier Joubert, Stephen Ware, Tomi Kivela, Sebastien Molines, Hans Harrod and Kimmo Hakala for tracking down bugs
+If a program won't run from hard drives, copy it to a disk image using the ST desktop, and it might work better
+Some programs won't work if their disk is read only, always try making it read-write (or extracting the disk if it is in an archive) if you have problems
+Some programs won't work with memory size set to 4Mb or 512Kb
+
+[WINSCROLLERS]
+maximize the window to go to fullscreen mode (directx required)
+Know your mc68k from your mk68901?  Download the debug build of steem and help us get those bad games working
+drag a file to the Home button with right mouse button - easy shortcuts to your disks.
+folder containing ZIP files too slow to appear? turn off "check all archives" to speed things up.
+If you are using fullscreen monochrome, select "fullscreen 8-bit" for extra speed
+
+
+[LINKS]
+...Game Downloads
+Little Green Desktop - Ultimate ST site, game downloads, reviews, screenshots and much more
+http://www.atari.st/
+LGD ST Emulators forum - Quickly find answers to any emulation question
+http://www.atari.st/forum/list.php?f=8
+Complete list of Automation CDs and links to download them
+http://www.blimey.strayduck.com/automation.htm
+Atari Forum - Great forums on all Atari related subjects, including a fantastic game and demo request forum
+http://www.atari-forum.com/
+Lee's Atari ST Shrine
+http://www.atari-shrine.co.uk/
+PaCiGame - Great site of rare compilation disks
+http://www.pacigame.com/
+Atari Force
+http://atariforce.free.fr/
+Atari ST Pirate Gold FTP
+ftp://atari:atari@217.215.10.41/
+AtariArchive.com - Atari Emulation Heaven
+http://www.atariarchive.com/
+ftp.cs.tu-berlin.de
+ftp://ftp.cs.tu-berlin.de/pub/atari/
+Relic ST
+http://atari.krang.net/
+Pepper FTP
+ftp://atari:ste@zzzt.alexpepper.com:549/
+The Fuzion Shrine
+http://omiquel.lautre.net/
+Medway Boys Menus - The Pictures
+http://www.spiny.org/medway/
+Crawly Crypt Archives
+http://www.spythis.com/cca/
+Modulation Emulation
+http://fp.modula.plus.com/sites/emulation/
+Sives-Rutherford FTP (Download)
+ftp://atariscne:atariscne@www.sives-rutherford.co.uk:23/
+Sives-Rutherford FTP (Upload, do this to keep the site alive)
+ftp://atariscneupload:atariscneupload@www.sives-rutherford.co.uk:23/
+Joe's Atari ST Stuff FTP
+ftp://atari:st@208.42.19.22/
+Atari Games
+http://atari.games.free.fr/
+Emulation Atari ST Mr Nours (French)
+http://mrnours.atari.org/
+Zogging Hell!!!
+http://www.zhell.co.uk/
+Atari ST Zone
+http://www.atarizone.com/
+Atari ST Compil' (French)
+http://ataricd.fr.st/
+Atari Sidan
+http://w1.316.telia.com/~u31614420/atari2eng.htm
+Gorila Atari Center
+http://gorila.8m.com/main.htm
+TQ Gaming
+http://www.tq-gaming.com/index.html
+Missing Atari ST Games
+http://missing.atari.org/
+Regression Therapy
+http://website.lineone.net/~mikemee/
+Atari Emulation Support (AES)
+http://www.geocities.com/dahstra/atari.html
+DBug
+http://dbug.atari.org/
+Pompey Pirates
+http://pompeypirates.atari.org/
+The Pompey Pirate Menu Page
+http://www.ewtoo.org/~matt/pp/index.shtml
+Reservoir Gods
+http://www.reservoir-gods.com/
+Thalion Webshrine
+http://thalion.atari.org/
+Official Lethal Xcess Website
+http://edv-rudolf.de/lethal-xcess/main.htm
+Computer EmuZone - Atari
+http://emuzone.metropoliglobal.com/atari/
+ftp.spudster.org
+ftp://ftp.spudster.org/pub/Atari/ST/Hackerz_Mirror
+ftp.lip6.fr
+ftp://ftp.lip6.fr/pub/atari
+ftp.padua.org
+ftp://ftp.padua.org/pub/atari
+www.funet.fi
+http://www.funet.fi/pub/atari/
+Alone in the Past (French)
+http://www.aitp.fr.st/
+Gryzor
+http://www.gryzor.info/index2.html
+Atari ST Applications Center
+http://stappz.atari.org/
+Atari ST Hall of Fame
+http://atari.ma.cx/
+Mr. Sam's Atari ST Site
+http://www.h2nob.de/games/atari/st/
+Mike's Web Archive
+http://members.optusnet.com.au/~atari1/
+...Other Downloads
+Tim's Atari MIDI World - Comprehensive MIDI site
+http://tamw.atari-users.net/
+Pangaelin Willow AtariTOS ROMs
+http://homepage.mac.com/carlhafner/AtariTOS.html
+MSA Converter
+http://pageperso.aol.fr/zorg63/
+EmuTOS
+http://sourceforge.net/projects/emutos
+Windows Floppy Disk Copy
+http://sourceforge.net/projects/wfdcopy/
+Gemulator Explorer
+http://www.emulators.com/explorer.htm
+Makedisk Tutorial
+http://home.tu-clausthal.de/~ifmar/makedisk/
+ST2Disk
+http://www.8hz.com/stdisk/
+Disk2FDI
+http://www.oldskool.org/disk2fdi
+ST Format Coverdisks - Almost every STF disk ever ready for download!
+http://atariarchive.com/stformat/
+Darkspace Atari Archive
+http://atari.darkspace.org.uk/
+Cow-net - Free sound and MIDI applications
+http://dspace.dial.pipex.com/electronic_cow/cownet.shtml
+Maggie disk magazine FTP
+ftp://ftp.funet.fi/pub/atari/mag/maggie/
+Musique.Atari.Org (French)
+http://atari.georezo.net/atari/emul/
+CPS Games
+http://www.cps-games.co.uk/newindex.html
+ARGanoid's ST Scene page
+http://argnet.fatal-design.com/stscene.htm
+Bitmap Brothers Games Tribute Page
+http://www.gods-country.de/
+Richards ATARI Pages
+http://ilikeu.users.btopenworld.com/Index.html
+Epsilon's Archives (French and English)
+http://tms.foxysofts.com/
+...Demos
+PaCiDemo - Huge demo site
+http://pacidemo.planet-d.net/
+Dead Hackers Society
+http://www.dhs.nu/
+Megatari
+http://megatari.atariarchive.com/
+Deus Ex Atari
+http://www.recycledsteel.co.uk/trooper/
+SYNC
+http://www.sync.st/
+Delta Force - Featuring the complete history of ST demos
+http://wwwbrauer.informatik.tu-muenchen.de/~brandtf/df.html
+Tron.com
+http://tron.atari.org/troncom/index.htm
+DemonSTracja (Polish)
+http://demonstracja.scene.pl/
+PHF - Atari, C64 & Amiga coders
+http://www.tphf.karoo.net/
+Cybernetics
+http://cyber.savina.net/
+Equinox
+http://equinox.planet-d.net/
+Sector One Homepage
+http://deunstg.free.fr/sct1/index.html
+MJJ Prod (French)
+http://mjjprod.9online.fr/pages/mjjprodpag.html
+Cyclone's X-Troll Website
+http://www.edv-rudolf.de/xtroll/
+Stéphane Perez's HomePage
+http://membres.lycos.fr/toxicmag/e_frames.php
+www.funet.fi
+http://www.funet.fi/pub/atari/demo/
+X-Troll
+http://xtroll.atari.org/
+Laserforce Homepage (French)
+http://lst.laserforce.org/
+Zeal - The Atari STE demo crew
+http://hem.passagen.se/rubbish/zeal/
+Newcore
+http://hem.passagen.se/newcore/
+...Other Sites
+Atari ST Game List - Find out what disk image contains the game you want
+http://www.geocities.com/bpadinha/
+ST Encyclopedia - Another great game list
+http://encyclopedia.atari.org/
+megaliST
+http://www.chinanski.com/megaliST/
+Atari.Org - General interest site about all Atari computers
+http://www.atari.org/
+The ST Graveyard
+http://www.emuitalia.com/stgraveyard/
+MyAtari.net - Free on-line Atari magazine
+http://www.myatari.net/
+Atari Users Network
+http://www.atari-users.net/
+ATARItoday - Atari news, links and reviews
+http://www.ataritoday.com/index.htm
+Atari Explorer
+http://www.atari-explorer.com/index.html
+GokMasE's Atari Page
+http://aicq.atari-users.net/
+Atari Launchpad - Many links to the world of Atari on the web
+http://www.geocities.com/SiliconValley/Bay/8745/pages/misc.html
+Freddo (French)
+http://www.chez.com/freddo/
+Atarihacks by Vezz
+http://atarihacks.cjb.net/
+Atari MIDI Links
+http://groups.yahoo.com/group/atari-midi/links
+modArt
+http://www.sirlab.de/tscc/modart.html
+aLiVe! HQ
+http://alive.atari.org/
+Atari Bestof Charts
+http://www.brainbug.ch/bestof/
+The ST Format Shrine
+http://www.stformat.com/
+Computer Magazin Archiv (German and English)
+http://www.stcarchiv.de/
+Classic Computer Magazine Archive
+http://www.atarimagazines.com/
+The Bird Sanctuary - Rainbird, Firebird and Silverbird
+http://www.birdsanctuary.co.uk/
+public ATARI (German)
+http://www.haretuerk.de/atari/index.html
+ST Alive
+http://www.chez.com/stalive/pages/indexpag.html
+AtariAge
+http://www.atariage.com/
+Atari-source.com  Your SOURCE for Atari
+http://portal.atari-source.com/
+Cheek.Org - Atari STuff News
+http://www.cheek.org/atari/
+Niclas Pennskog's Atari Page
+http://www.pennskog.com/niclas/atari/
+Atari Computer Database
+http://acd.atari.org/
+The Orphaned Projects Page
+http://topp.atari-users.net/
+Atari ROMs Chest
+http://www.atari-roms.de/
+[LINKSEND]
+
+
+[UPDATEPATCHES]
+8 patches.zip 5718
+
+
+[UPDATEUSER]
+2.4 steem_v2_4.zip 594078
+Version 2.4 of Steem is available for download. It's come much sooner than we expected but soon after the release of v2.3 Hans Härröd, one of the authors of Obsession, managed to fix the bug that stopped that great game (and also Substation, another brilliant game) from working. Also we have had many great contributions from Kimmo Hakala to fix some long standing bugs, so there are lots of programs that work now that never did before.
+
+-- Bugs Fixed --
+. Blitter halftone bug thanks to Hans Härröd (Obsession, Substation)
+. Movem register mask bug thanks to Kimmo Hakala (Vodka Demo)
+. Movem predecrement order bug thanks to Kimmo Hakala (Alien Storm)
+. Asl.b carry bug thanks to Kimmo Hakala
+. move to abs.l prefetch bug fixed with help from Kimmo Hakala (Synth Dream 2)
+. Blitter NFSR bug thanks to Hans Härröd (Ecstasy demo)
+. GPIP, AER and DDR emulation vastly improved (Realtime, M)
+. STE sound improved (Coreflakes demo)
+. Speeded up stop instruction
+. JPEG screenshot extension bug fixed
+. Stopped using DirectSound 7, using DirectSound 2 again
+. Removed pop sound when stop
+. Stopped auto fast forward on floppy access messing with normal fast forward
+. Fixed timer timeout after stop bug (Test Drive)
+
+-- New Features --
+. Sound output format option
+
+Hope you enjoy the new version, send any suggestions/problems to steem@gmx.net
+
+Anthony and Russell Hayward
+
+[UPDATEDEBUG]
+2.4 steemdebug_v2_4.zip 790452
+Version 2.4 of Steem is available for download. It's come much sooner than we expected but soon after the release of v2.3 Hans Härröd, one of the authors of Obsession, managed to fix the bug that stopped that great game (and also Substation, another brilliant game) from working. Also we have had many great contributions from Kimmo Hakala to fix some long standing bugs, so there are lots of programs that work now that never did before.
+
+-- Bugs Fixed --
+. Blitter halftone bug thanks to Hans Härröd (Obsession, Substation)
+. Movem register mask bug thanks to Kimmo Hakala (Vodka Demo)
+. Movem predecrement order bug thanks to Kimmo Hakala (Alien Storm)
+. Asl.b carry bug thanks to Kimmo Hakala
+. move to abs.l prefetch bug fixed with help from Kimmo Hakala (Synth Dream 2)
+. Blitter NFSR bug thanks to Hans Härröd (Ecstasy demo)
+. GPIP, AER and DDR emulation vastly improved (Realtime, M)
+. STE sound improved (Coreflakes demo)
+. Speeded up stop instruction
+. JPEG screenshot extension bug fixed
+. Stopped using DirectSound 7, using DirectSound 2 again
+. Removed pop sound when stop
+. Stopped auto fast forward on floppy access messing with normal fast forward
+. Fixed timer timeout after stop bug (Test Drive)
+
+-- New Features --
+. Sound output format option
+. Debug: Branch target address display
+
+Hope you enjoy the new version, send any suggestions/problems to steem@gmx.net
+
+Anthony and Russell Hayward
+
+[END]

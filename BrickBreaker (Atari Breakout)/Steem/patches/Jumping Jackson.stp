@@ -1,0 +1,13 @@
+[Text]
+Description=This game seems to do something different every time it is run. If the screen goes black after title picture then press space to continue. Make sure you don't fast forward and if you're lucky it'll work!
+ApplyWhen=The level 1 sign appears.
+Version=Works on Steem v2.2
+PatchAuthor=Russell Hayward
+Obsolete=2.3
+
+[Patch]
+012264=$4e71 $4e71
+012268=$4e71 
+01226A=$4e71 $4e71
+01226E=$4e71 $4e71
+012272=$4e71 

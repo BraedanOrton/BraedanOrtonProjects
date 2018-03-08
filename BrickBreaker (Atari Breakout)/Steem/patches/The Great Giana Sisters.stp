@@ -1,0 +1,9 @@
+[Text]
+Description=This patch is for the version of the game with the intro.
+ApplyWhen=The Time Warp Productions logo appears.
+Version=Works on Steem v2.06
+PatchAuthor=Russell Hayward
+Obsolete=2.1
+
+[Patch]
+0101BA=$4e71 $4e71

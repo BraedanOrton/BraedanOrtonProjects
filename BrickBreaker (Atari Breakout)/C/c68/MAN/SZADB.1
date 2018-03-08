@@ -1,0 +1,346 @@
+
+NAME
+
+	szadb - Sozobon debugger
+
+USAGE
+
+	szadb  program
+
+SUMMARY
+
+Szadb is a machine language debugger with symbols which is similar
+to the old UNIX 'adb' command.  Szadb is used to control and monitor
+another program.  This program is loaded into memory and relocated
+when szadb is first started.  Commands to szadb allow the user to
+examine and modify memory and machine registers, single step and set
+breakpoints.
+
+
+WINDOWS
+
+Szadb uses its own window or screen.  Thus commands and output will
+not interfere with the program's window.  In fact, szadb does output
+without using the BIOS so as not to confuse the program's cursor.
+
+Use <cntl-w> to view the program's screen when you are in the szadb
+window.  Type another character to get back.
+
+
+ONLINE HELP
+
+A summary of this manual is available by typing the 'help' key.  Use 'q'
+to get back to the szadb prompt.  Typing any other key will advance to the
+next help screen.
+
+People in other countries are encouraged to come up with versions of szadb
+with the messages in their language.  You should only have to change the
+one file "lang.h".
+
+
+SYNTAX
+
+In the following description of commands, certain syntactic abbreviations
+are used.
+
+	{expr}   - any valid expression consisting of numbers, symbols and
+		   operators.  See the section on EXPRESSIONS
+       ,{count}  - a repeat count for the command.  Can be any expression
+	{format} - a string of characters which specifies how values are 
+		   printed.  See the section on FORMATS
+	{args}	 - The arguments or parameters to be passed to the program
+	{value}  - an additional expression used by the command
+
+
+FORMAT OF COMMANDS
+
+The general format for command X is
+
+	{expr},{count}X			for most commands
+or	{expr},{count}X{format}		for / or ? or =
+or	{expr},{count}X{args}		for :c or :s
+or	{expr},{count}X{value}		for /w or /W
+
+Spaces and tabs can be input to improve readability.  They are always
+ignored.
+
+All fields are optional.  If {count} is missing, we do the command once.
+If {format} is missing we re-use the last {format}.  If {args} are missing,
+no parameters are passed.  If {values} are missing, nothing is written.
+
+If {expr} is missing, we use the value of DOT.  DOT is set to the PC after
+we single step or hit a breakpoint.  DOT is set to {expr} by most commands.
+DOT is set to the next address after locations that were printed by
+the / or ? command.
+
+If the command is missing, we use the last command.  Thus an empty line
+repeats the last command with DOT for the {expr} and 1 for the {count}
+(and {format} the same as before).
+
+
+THE ':' GROUP
+
+	:s or :S
+
+	This command is used to single step the program.  It will use the
+	trace bit of the 68000 to force a trap after one instruction.
+	We do not switch to the program window for single stepping.
+
+	:c or :C
+
+	This command is used to continue the program.  We will switch to
+	the program window and run at full speed until a breakpoint is
+	hit, a trap occurs or the program exits. 
+
+	The upper case versions of each command print all the machine
+	registers after running the program.
+
+	The first :c or :s can be followed by {args} which specify the
+	parameters to be passed to the program.
+
+	If an {expr} field is given to the :c or :s, the PC is set to
+	that value.  This should be used with care!
+
+	:b  -  set a breakpoint at {expr}
+	:d  -  delete the breakpoint at {expr}
+
+Note that the only way to re-start the program is to exit szadb and start
+over.
+
+THE '$' GROUP
+
+	$q	- quit szadb
+	$r	- print all register values
+	$e	- print all external symbols and their values
+	$o	- use octal numbers
+	$x	- use hex numbers
+	$d	- use decimal numbers
+  	$s	- set the maximum symbol offset to {expr}
+		  When address are printed by szadb, they are printed as
+		  symbol+offset if offset is <= to this value
+	$b	- print all breakpoints
+	$c	- print a stack backtrace
+	$C	- print a stack backtrace with arguments
+		  If szadb cannot determine the number of arguments
+		  (because there were none or because the optimizer was used),
+		  it prints the location on the stack where they might be
+	$p	- print the basepage of the program
+
+
+THE '/' or '?' GROUP
+
+UNIX adb uses '?' to examine a program file and '/' to look at running
+process's memory.  Since szadb only looks at memory, either can be used.
+We recommend using '/' since later versions of szadb may use '?' for files.
+
+	/
+
+	Print values from memory according to a format.  See FORMATS.
+	{expr} gives the starting address to fetch values from.
+	If there is more than one format character, we increment the
+	address used by the size of the value printed.
+
+	/w	- Write a 2-byte value to memory at address {expr}
+	/W	- Write a 4-byte value to memory at address {expr}
+
+THE '=' COMMAND
+
+	=
+
+	Print the value of {expr} according to a format.  See FORMATS.
+	If there is more than one format character, we print the same
+	value each time.
+
+THE '>' GROUP
+
+Register values can be changed using '>' followed by the register name.
+This sets that register to the value of {expr}.  See REGISTER NAMES
+
+
+FORMATS
+
+Formats are similar to printf() format strings.  They specify the way
+values are printed.  However, since we almost always want to print a
+value and not some literal string, the '%' before each format is missing.
+Also, we usually use upper case for long values instead of a leading 'l'.
+Thus %d%lx%o becomes dXo.
+
+	d  - print 2-bytes as decimal
+	D  - print 4-bytes as decimal
+	x  - print 2-bytes as hex
+	X  - print 4-bytes as hex
+	o  - print 2-bytes as octal
+	O  - print 4-bytes as octal
+	c  - print a single character
+	b  - print 1-byte as octal
+	s  - print a string
+
+In addition, we add the following non-printf-like formats:
+
+	i  - print a single machine language instruction
+	S  - print a string with '.' for special characters
+	p  - print the current value of DOT as a symbol plus offset
+	a  - same as p except also print a ':' and tab
+	r  - print a space
+	n  - print a newline
+ "string"  - print a literal string
+	+  - increment DOT (nothing printed)
+	-  - decrement DOT (nothing printed)
+	^  - backup DOT by the last size printed
+
+Formats can also be preceeded by a decimal number.  This number is
+usually the repeat count for the next format.  Thus instead of saying
+main/iiiiXXXXXX you can say main/4i6X
+
+The 't' format is always preceed by a number.  This format advances to
+the next tab stop which a multiple of that number.
+
+
+EXPRESSIONS
+
+	Expressions are a lot like C expressions.  They include numbers
+and symbols with unary and binary operators.  Expressions are always
+evaluated using long (4-byte) arithmetic.  Parenthesis can be used for
+grouping.  There is no precedence among binary operators - evaluation is
+strictly left to right.
+
+    NUMBERS
+
+	Numbers can be entered in any base.  A base is specified using one
+of the following prefixes:
+
+	0x - hex
+	0t - decimal
+	0o - octal
+
+	If there is no such prefix, the default base will be used.  The
+default base when you start szadb is hex.  Use a leading 0 if you need
+to enter a hex number which starts with a letter.
+
+    SYMBOLS
+
+	If your program has a symbol table, these symbol names can be
+used in expressions.  The value of a symbol is the address of that
+variable or function.  Although the C compiler adds a leading '_' to
+all symbols, the symbol name will be found with or without the '_'.
+
+    OTHER VALUES
+
+	Character literals can be entered by enclosing one to four
+characters in single quotes.  Multi-character literals put the first
+character in the highest byte.
+
+	The value of DOT can be used in an expression by typing "."
+
+	Use "&" to represent the last typed {expr} field.  (DOT
+changes when you print with / or ?.  "&" does not.)
+
+    UNARY OPERATORS
+
+	-   unary minus (2-s complement)
+	~   bitwise complement (1-s complement)
+	*   fetch of 4 bytes from an address
+	@   fetch of 2 bytes from an address
+
+    BINARY OPERATORS
+
+	+   addition
+	-   subtraction
+	*   multiplication
+	%   division (NOT '/' !)
+	&   bitwise and
+	|   bitwise or
+
+
+REGISTER NAMES
+
+Szadb uses the standard Motorola register names with 'sp' for 'a7'.
+Actually, there are two stack pointers which Motorola calls 'usp' for
+the user stack pointer and 'ssp' for the supervisor stack pointer.
+Szadb calls the other stack pointer 'xsp'.  This will be 'ssp' if
+your program is running in user mode (as it usually is) or 'usp' if
+it is running in supervisor mode.
+
+
+SPECIAL CHARACTERS
+
+When entering a command, use the left-arrow (backspace) to erase typed
+characters.  When a lot of output is being printed, you can use cntl-S
+to suspend output temporarily or cntl-C to stop the command.
+
+Use the help key to get a summary of this document from within szadb.
+
+
+MAGIC STUFF
+
+Szadb works by changing the trap vectors to point to itself.  If you
+try to debug any program which changes the trap vectors, szadb will not
+work.
+
+Breakpoints cannot be set on ROM locations, but szadb will not give you
+an error if you try.
+
+Various shells do funny things to parameters.  Szadb does not Upper-case
+arguments and does not pass more than 128 bytes of parameters.
+
+Programs compiled with the dLibs startup routine (e.g. most programs
+compiled with Sozobon C) do funny things to try to determine argv[0].
+In particular a pointer to the parent's basepage is followed.  Szadb
+does not set up this pointer, so argv[0] is not passed under szadb.
+
+Certain programs only work when loaded at a certain address (or only
+fail when loaded at a certain address).  Running a program under szadb
+changes where that program is loaded.  Thus behavior under szadb may
+be different from what happens otherwise.
+
+Programs with bugs may modify random locations of memory.  If they 
+happen to modify a value that is part of szadb, szadb will probably
+die.  Unfortunately, this isn't UNIX.
+
+
+WHERE TO GET SOZOBON C
+
+Sozobon C is freely distributed through many bulletin boards and computer
+networks worldwide.  If you cannot find it anywhere locally, you can
+always order the newest release from us directly.  Send $10 US to cover
+shipping, handling and floppies (add a couple $ for European orders) to
+
+		Tony Andrews
+		5902E Gunbarrel Ave.
+		Boulder, Colorado USA  80301
+
+After March 30, 1990 this will change to
+
+		Tony Andrews
+		4704 Berkshire Court
+		Boulder, Colorado USA  80301
+
+Make checks payable to Tony Andrews.  Specify single or double sided
+floppies (you will get double sided if you don't say anything).
+
+If you don't need the release, but you want to encourage further product
+development from Sozobon Ltd, we will gladly accept money, ST software
+such as games you don't play anymore, freeware or shareware you have
+written with Sozobon and/or simple words of encouragement.
+
+
+LEGALESE
+
+/* Copyright (c) 1990 by Sozobon, Limited.  Authors: Johann Ruegg, Don Dugger
+ *
+ * Permission is granted to anyone to use this software for any purpose
+ * on any computer system, and to redistribute it freely, with the
+ * following restrictions:
+ * 1) No charge may be made other than reasonable charges for reproduction.
+ * 2) Modified versions must be clearly marked as such.
+ * 3) The authors are not responsible for any harmful consequences
+ *    of using this software, even if they result from defects in it.
+ */
+
+UNIX is a trademark of AT&T (it used to be a trademark of Bell Labs)
+
+
+AUTHORS
+
+	Johann Ruegg	uunet!dunike!onecom!wldrdg!hans
+	Don Dugger	uunet!dunike!onecom!wldrdg!n0ano

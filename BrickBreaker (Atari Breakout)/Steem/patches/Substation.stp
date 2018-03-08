@@ -1,0 +1,9 @@
+[Text]
+Description=This game does some crazy stuff with DMA sound, it doesn't work on Steem but you can skip it with this patch and play the game in silence.
+ApplyWhen=Just after pressing return on the protection screen.
+Version=Works on Steem v2.3
+PatchAuthor=Anthony Hayward
+Obsolete=2.4
+
+[Patch]
+0AB9F0=$4E75

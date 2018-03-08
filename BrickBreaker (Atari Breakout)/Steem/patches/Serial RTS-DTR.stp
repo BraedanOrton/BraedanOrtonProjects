@@ -1,0 +1,10 @@
+[Text]
+Description=When the Steem resets it sets the RTS and DTR pins of the serial port low when they should be high, this patch fixes that.
+ApplyWhen=You have reset.
+Version=Works on Steem v2.4
+PatchAuthor=Russell Hayward
+Obsolete=2.5
+
+[Patch]
+ff8800=14
+ff8802=$ff
